@@ -1,0 +1,58 @@
+/* ── Official Light Mode Defaults ── */
+:root {
+  --ease-bg-base: #ffffff;
+  --ease-text-base: #111827;
+  --ease-border-color: #e5e7eb;
+  --ease-card-bg: #f9fafb;
+  --ease-primary: #4f46e5;
+  --ease-primary-text: #ffffff;
+}
+
+/* ── Native OS Dark Mode Synchronization ── */
+/* This media query ensures the UI matches the user's system settings automatically */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ease-bg-base: #111827;
+    --ease-text-base: #f9fafb;
+    --ease-border-color: #374151;
+    --ease-card-bg: #1f2937;
+    --ease-primary: #818cf8;
+    --ease-primary-text: #111827;
+  }
+}
+
+/* ── Component Styling utilizing the synchronized tokens ── */
+body.ease-demo-body {
+  background-color: var(--ease-bg-base);
+  color: var(--ease-text-base);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ease-demo-card {
+  background-color: var(--ease-card-bg);
+  border: 1px solid var(--ease-border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 400px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.ease-demo-button {
+  background-color: var(--ease-primary);
+  color: var(--ease-primary-text);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ease-demo-button:hover {
+  filter: brightness(1.1);
+}

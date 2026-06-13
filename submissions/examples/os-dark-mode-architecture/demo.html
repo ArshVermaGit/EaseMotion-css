@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OS Dark Mode Architecture Demo</title>
+  <link rel="stylesheet" href="../../easemotion.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ease-demo-body">
+  <div class="ease-container">
+    <h1 class="ease-text-2xl ease-font-bold" style="margin-bottom: 0.5rem;">OS Dark Mode Sync</h1>
+    <p style="margin-bottom: 2rem; opacity: 0.8; max-width: 600px;">
+      This page automatically detects your Operating System's appearance setting. Try toggling your Mac/Windows into Dark Mode, and watch this page instantly invert without reloading or clicking any buttons!
+    </p>
+
+    <!-- Visual Proof Component -->
+    <div class="ease-demo-card">
+      <h2 style="margin-top: 0; font-size: 1.25rem;">System-Aware Card</h2>
+      <p style="opacity: 0.8; font-size: 0.9rem;">
+        Because this component utilizes the <code>@media (prefers-color-scheme: dark)</code> overrides at the root CSS variable level, it is perfectly synchronized with the OS.
+      </p>
+      <button class="ease-demo-button">
+        Dynamic Button
+      </button>
+    </div>
+  </div>
+</body>
+</html>
